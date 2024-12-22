@@ -18,7 +18,7 @@ Aluno EAD
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-bory{
+body{
     font-family: "Open Sans", serif;
     font-size: 1em;
 }
@@ -26,16 +26,70 @@ bory{
 /* Layout */
 .Container {
     margin: 0 auto;
-    background-color: #7f0;
+    /* background-color: #dcdcdc; */
+}
+
+.Flex {
+    display: flex;
+    justify-content:space-between ;
+    /* background-color: #a9a9a9; */
+}
+
+/* topo do site */
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
+/* Cabeçalho */
+header {
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+#chek {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    /* padding-right: 15px; */
+}
+
+nav ul {
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    /* position: fixed; */
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s; 
+}
+
+#check:checked ~ ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+text-decoration: none;
+color: white;
+}
+
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 576px) {
-    body{
-        background-color: #00ffff;
-    }
+@media (min-width: 576px) { 
     /* Layout */
     .Container {
         max-width: 540px;
@@ -43,9 +97,6 @@ bory{
 }
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 @media (min-width: 768px) {
-    body{
-        background-color: #ffff00;
-    }
     /* Layout */
     .Container {
         max-width: 720px;
@@ -53,9 +104,6 @@ bory{
 }
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
  @media (min-width: 992px) {
-    body{
-        background-color: #ff6600;
-    }
     /* Layout */
     .Container {
         max-width: 960px;
@@ -63,11 +111,39 @@ bory{
 }
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
-    body{
-        background-color: #ff0000;
-    }
     /* Layout */
     .Container {
         max-width: 1140px;
     }
 }
+    /* Cabeçalho Header */
+    header {
+        height: 120px;
+    }
+    #logo img {
+        width: 128px;
+        height: 128px;
+        margin-top: 30px;
+    }
+    label {
+    display: none;
+}
+    nav ul {
+        static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li a {
+        color: #343538
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a:hover {
+        color: #c00000;
+    }
