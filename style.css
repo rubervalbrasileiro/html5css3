@@ -8,7 +8,7 @@ Aluno EAD
 
 
 /* CSS RESET - Torna a configuração padrão para todos o navegadores. */
-    *{
+* {
     margin: 0;
     border: 0;
     padding: 0;
@@ -18,7 +18,7 @@ Aluno EAD
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-body{
+body {
     font-family: "Open Sans", serif;
     font-size: 1em;
 }
@@ -29,9 +29,19 @@ body{
     /* background-color: #dcdcdc; */
 }
 
+.Botao {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
 .Flex {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     /* background-color: #a9a9a9; */
 }
 
@@ -71,10 +81,10 @@ nav ul {
     top: 60px;
     right: -100%;
     width: 100%;
-    transition: all 0.5s; 
+    transition: all 0.5s;
 }
 
-#check:checked ~ ul {
+#check:checked~ul {
     right: 0;
 }
 
@@ -84,66 +94,127 @@ nav ul li {
 }
 
 nav ul li a {
-text-decoration: none;
-color: white;
+    text-decoration: none;
+    color: white;
+}
+
+/* Destaque */
+main {
+    height: 75vh;
+    background: url(./video/Paraquedista-webm.webm);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 1em;
+    margin: 20px 0px 50px 0px;
 }
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
+
     /* Layout */
     .Container {
         max-width: 540px;
     }
+
+    /* Destaque para o banner */
+    main h1,
+    h2 {
+        text-shadow: #000 0.05em 0.05em 0.05em;
+    }
 }
-/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
+
     /* Layout */
     .Container {
         max-width: 720px;
     }
+    /* Destaque para o banner*/
+    main {
+        height: 45vh;
+    }
+    main h1 {
+        font-size: 5.5em;
+    }
+
+    main h2 {
+        font-size: 2.em;
+    }
 }
+
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
- @media (min-width: 992px) {
+@media (min-width: 992px) {
+
     /* Layout */
     .Container {
         max-width: 960px;
     }
+    /* Destaque para o banner */
+    main {
+        height: 70vh;
+    }
+
+    main h1 {
+
+    }
+
+    main h2 {
+        
+    }
 }
+
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
+
     /* Layout */
     .Container {
         max-width: 1140px;
     }
 }
-    /* Cabeçalho Header */
-    header {
-        height: 120px;
-    }
-    #logo img {
-        width: 128px;
-        height: 128px;
-        margin-top: 30px;
-    }
-    label {
+
+/* Cabeçalho Header */
+header {
+    height: 120px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+    margin-top: 30px;
+}
+
+label {
     display: none;
 }
-    nav ul {
-        static;
-        height: auto;
-        background-color: transparent;
-        margin-top: 50px;
-    }
 
-    nav ul li a {
-        color: #343538
-    }
+nav ul {
+    static;
+    height: auto;
+    background-color: transparent;
+    margin-top: 50px;
+}
 
-    nav ul li {
-        float: left;
-        border: 0;
-    }
+nav ul li a {
+    color: #343538
+}
 
-    nav ul li a:hover {
-        color: #c00000;
-    }
+nav ul li {
+    float: left;
+    border: 0;
+}
+
+nav ul li a:hover {
+    color: #c00000;
+}
