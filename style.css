@@ -4,6 +4,31 @@ Folha de estilo HTM% e CSS#o
 Aluno EAD
 */
 
+
+
+
+/* CSS RESET - Torna a configuração padrão para todos o navegadores. */
+    *{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* Importação Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+bory{
+    font-family: "Open Sans", serif;
+    font-size: 1em;
+}
+
+/* Layout */
+.Container {
+    margin: 0 auto;
+    background-color: #7f0;
+}
+
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -11,11 +36,19 @@ Aluno EAD
     body{
         background-color: #00ffff;
     }
+    /* Layout */
+    .Container {
+        max-width: 540px;
+    }
 }
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 @media (min-width: 768px) {
     body{
         background-color: #ffff00;
+    }
+    /* Layout */
+    .Container {
+        max-width: 720px;
     }
 }
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -23,10 +56,18 @@ Aluno EAD
     body{
         background-color: #ff6600;
     }
+    /* Layout */
+    .Container {
+        max-width: 960px;
+    }
 }
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
     body{
         background-color: #ff0000;
+    }
+    /* Layout */
+    .Container {
+        max-width: 1140px;
     }
 }
